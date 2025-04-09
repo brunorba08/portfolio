@@ -468,6 +468,34 @@
       font-size: 18px;
       border-top: 1px solid rgba(255,255,255,0.2);
       }
+    .trajetoria-resumida {
+        margin-top: 50px;
+        padding-left: 30px;
+        border-left: 2px solid #61dafb;
+      }
+
+      .trajetoria-resumida .linha {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #ffffff;
+      }
+
+      .trajetoria-resumida .bolinha {
+        width: 14px;
+        height: 14px;
+        background-color: #61dafb;
+        border-radius: 50%;
+      }
+      .descricao-itpower {
+        display: none;
+        margin-top: 15px;
+        padding-left: 25px;
+        color: #ffffff;
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+
 
   </style>
 </head>
@@ -499,7 +527,7 @@
       <div class="texto-sobre">
         <h1><span class="azul">Sobre</span> <span class="normal">mim</span></h1>
         <p>
-          Olá! Meu nome é <strong>Bruno Ribeiro</strong>, sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como <strong>desenvolvedor full stack</strong>, com uma forte preferência por <strong>front-end</strong>.
+          Olá! Meu nome é <strong>Bruno Ribeiro</strong>, tenho <strong><span id="idade"></span> anos</strong>, sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como <strong>desenvolvedor full stack</strong>, com uma forte preferência por <strong>front-end</strong>.
         </p>
         <p>
           Possuo conhecimento avançado em <strong>JavaScript</strong>, <strong>ColdFusion</strong> e <strong>SQL Server</strong>, além de experiência intermediária com <strong>C#</strong>, <strong>React</strong> e <strong>controle de versão com Git</strong>.
@@ -677,12 +705,82 @@
       </div>
   
     </div>
-  </section>  
+    <br><br>
+    <h1>Minha trajetória</h1>
+
+    <div class="trajetoria-resumida">
+      <div class="linha">
+        <div class="bolinha"></div>
+        <p>
+          <strong id="toggle-itpower" style="cursor: pointer; color: #61dafb;">Atualmente na ITPower</strong> — 
+          <span id="tempo-itpower"></span> de atuação
+        </p>
+      </div>
+    
+      <div class="descricao-itpower" id="descricao-itpower">
+        <p>
+          A <strong>ITPower</strong> é uma empresa de tecnologia que atua no desenvolvimento e sustentação de sistemas para o setor de <strong>seguros</strong>, com foco em grandes clientes como 
+          <strong>AON Brasil</strong>, 
+          <strong>AON México</strong>, 
+          <strong>Caixa Seguradora</strong>, 
+          <strong>Zurich</strong>, 
+          <strong>SulAmérica</strong>, entre outros.
+        </p>
+        <p>
+          Na empresa, trabalho com <strong>ColdFusion</strong>, <strong>JavaScript</strong>, <strong>SQL Server</strong> e <strong>Git</strong>, dando suporte e implementando melhorias nos sistemas internos das corretoras, além de otimizar processos e entregar soluções que agregam valor ao negócio.
+        </p>
+      </div>
+    </div>
+  </section> 
 
   <footer class="footer">
     <p>© Todos os direitos reservados — Bruno Ribeiro</p>
   </footer>
 </body>
+
+<script>
+  function calcularIdade(dataNascimento) {
+    const hoje = new Date();
+    const nascimento = new Date(dataNascimento);
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+    const mesAtual = hoje.getMonth();
+    const diaAtual = hoje.getDate();
+
+    if (
+      mesAtual < nascimento.getMonth() ||
+      (mesAtual === nascimento.getMonth() && diaAtual < nascimento.getDate())
+    ) {
+      idade--;
+    }
+
+    return idade;
+  }
+
+  document.getElementById("idade").textContent = calcularIdade("2003-08-08");
+</script>
+
+<script>
+  document.getElementById("toggle-itpower").addEventListener("click", function () {
+    const descricao = document.getElementById("descricao-itpower");
+    descricao.style.display = descricao.style.display === "none" || descricao.style.display === "" ? "block" : "none";
+  });
+
+  // Script para calcular tempo de atuação desde julho de 2024
+  const inicio = new Date(2024, 6); // julho é mês 6 (zero-based)
+  const hoje = new Date();
+  const diffMeses = (hoje.getFullYear() - inicio.getFullYear()) * 12 + (hoje.getMonth() - inicio.getMonth());
+  document.getElementById("tempo-itpower").textContent = `${diffMeses} mês${diffMeses !== 1 ? 'es' : ''}`;
+ 
+  function calcularMesesDesdeJulho2024() {
+    const inicio = new Date(2024, 6); // Julho = 6 (0 indexado)
+    const hoje = new Date();
+    const anos = hoje.getFullYear() - inicio.getFullYear();
+    const meses = hoje.getMonth() - inicio.getMonth() + anos * 12;
+    return meses <= 1 ? `${meses} mês` : `${meses} meses`;
+  }
+
+  document.getElementById('tempo-itpower').innerText = calcularMesesDesdeJulho2024();
+</script>
 
 <script>
   // Ao clicar em uma box de projeto

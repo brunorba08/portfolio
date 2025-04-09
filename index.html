@@ -9,22 +9,21 @@
 
   <link rel="icon" type="image/png" href="img/Logo.png">
   <style>
-    /* Reset básico */
-    * {
+      * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
-    }
+      }
 
-    body {
-      background: #0a0a0a; /* preto suave */
+      body {
+      background: #0a0a0a;
       color: #ffffff;
       font-family: 'Arial', sans-serif;
-    }
+      }
 
-    /* HEADER */
-    header {
+      /* HEADER */
+      header {
       background-color: #0d1b2a;
       display: flex;
       justify-content: space-between;
@@ -36,36 +35,33 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
+      }
 
-    /* LOGO */
-    .logo img {
+      .logo img {
       height: 110px;
       width: auto;
       max-width: 100%;
       object-fit: contain;
-    }
+      }
 
-    /* MENU DE NAVEGAÇÃO */
-    nav ul {
+      nav ul {
       list-style: none;
       display: flex;
       gap: 30px;
       padding: 0;
       margin: 0;
-    }
+      }
 
-    nav ul li a {
+      nav ul li a {
       position: relative;
       text-decoration: none;
       color: #ffffff;
       font-size: 1em;
       font-weight: bold;
       transition: color 0.3s ease;
-    }
+      }
 
-    /* Linha animada embaixo do link */
-    nav ul li a::after {
+      nav ul li a::after {
       content: "";
       position: absolute;
       bottom: -4px;
@@ -74,117 +70,114 @@
       height: 2px;
       background-color: #61dafb;
       transition: width 0.3s ease;
-    }
+      }
 
-    /* Hover do link */
-    nav ul li a:hover {
+      nav ul li a:hover {
       color: #61dafb;
-    }
+      }
 
-    nav ul li a:hover::after {
+      nav ul li a:hover::after {
       width: 100%;
-    }
+      }
 
-    /* SECTIONS */
-    section {
+      section {
       padding: 100px 40px;
       min-height: 100vh;
-    }
+      }
 
-    /* FOOTER */
-    .footer {
+      .footer {
       background-color: #0d1117;
       color: #ffffff;
       text-align: center;
       padding: 20px 0;
       font-size: 0.95em;
       border-top: 1px solid #1f1f1f;
-    }
+      }
 
-    #sobre { background-color: #0a0a0a; }
-    #habilidades { background-color: #111; }
-    #projetos { background-color: #0a0a0a; }
-    #contato { background-color: #111; }
+      #sobre { background-color: #0a0a0a; }
+      #habilidades { background-color: #111; }
+      #projetos { background-color: #0a0a0a; }
+      #contato { background-color: #111; }
 
-    .sobre-mim {
-    background-color: #0d1117; /* azul escuro puxando para preto */
-    color: #fff;
-    padding: 100px 40px;
-    }
+      .sobre-mim {
+      background-color: #0d1117; 
+      color: #fff;
+      padding: 100px 40px;
+      }
 
-    .sobre-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    }
+      .sobre-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      }
 
-    .foto-perfil {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-    }
+      .foto-perfil {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      }
 
-    .foto-perfil img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #61dafb;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-    }
+      .foto-perfil img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #61dafb;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      }
 
-    .texto-sobre {
-    flex: 1 1 500px;
-    }
+      .texto-sobre {
+      flex: 1 1 500px;
+      }
 
-    .texto-sobre h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    }
+      .texto-sobre h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      }
 
-    .texto-sobre .azul {
-    color: #61dafb;
-    }
+      .texto-sobre .azul {
+      color: #61dafb;
+      }
 
-    .texto-sobre .normal {
-    color: #ffffff;
-    }
+      .texto-sobre .normal {
+      color: #ffffff;
+      }
 
-    .texto-sobre p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    }
+      .texto-sobre p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      }
 
-    .texto-sobre strong {
-    color: #61dafb;
-    }
+      .texto-sobre strong {
+      color: #61dafb;
+      }
 
-    @media (max-width: 768px) {
-    .sobre-container {
+      @media (max-width: 768px) {
+      .sobre-container {
       flex-direction: column;
       text-align: center;
-    }
+      }
 
-    .texto-sobre h1 {
+      .texto-sobre h1 {
       font-size: 2em;
-    }
+      }
 
-    .foto-perfil img {
+      .foto-perfil img {
       width: 180px;
       height: 180px;
-    }
-    }
+      }
+      }
 
-    .botao-cv {
+      .botao-cv {
       width: 100%;
       text-align: center;
       margin-top: 40px;
-    }
+      }
 
-    .botao-cv button {
+      .botao-cv button {
       background-color: #61dafb;
       color: #0d1117;
       border: none;
@@ -195,123 +188,123 @@
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 10px rgba(97, 218, 251, 0.4);
-    }
+      }
 
-    .botao-cv button:hover {
+      .botao-cv button:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(97, 218, 251, 0.6);
-    }
-    
-        .contato {
+      }
+
+      .contato {
       background-color: #0d1b2a;
       color: #ffffff;
       text-align: center;
       padding: 60px 20px;
-    }
+      }
 
-    .contato h1 {
+      .contato h1 {
       font-size: 2.2em;
       margin-bottom: 20px;
       color: #61dafb;
-    }
-    #habilidades h1 {
-    text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #61dafb; /* ou outra cor que combine com seu layout */
-    }
-    #projetos h1 {
-    text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #61dafb; /* ou outra cor que combine com seu layout */
-    }
+      }
+      #habilidades h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #61dafb; 
+      }
+      #projetos h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #61dafb; 
+      }
 
-    .contato p {
+      .contato p {
       font-size: 1.1em;
       margin-bottom: 40px;
-    }
+      }
 
-    .contato-cards {
+      .contato-cards {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
-    }
+      }
 
-    .card {
+      .card {
       background-color: #1b263b;
       padding: 30px;
       border-radius: 15px;
       width: 250px;
       text-align: center;
       box-shadow:
-        0 4px 10px rgba(0, 0, 0, 0.4),
-        0 0 15px rgba(97, 218, 251, 0.15);
+      0 4px 10px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(97, 218, 251, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+      }
 
-    .card:hover {
+      .card:hover {
       transform: translateY(-5px);
       box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.6),
-        0 0 25px rgba(84, 211, 246, 0.689); 
-    }
+      0 6px 20px rgba(0, 0, 0, 0.6),
+      0 0 25px rgba(84, 211, 246, 0.689); 
+      }
 
-    .card i {
+      .card i {
       font-size: 2.5em;
       color: #61dafb;
       margin-bottom: 15px;
-    }
+      }
 
-    .card h3 {
+      .card h3 {
       margin-bottom: 10px;
       font-size: 1.3em;
       color: #ffffff;
-    }
+      }
 
-    .card a {
+      .card a {
       color: #61dafb;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
-    }
+      }
 
-    .card p {
-      color: #61dafb; /* azul claro */
+      .card p {
+      color: #61dafb;
       font-weight: bold;
       font-size: 1em;
       word-wrap: break-word;
       overflow-wrap: break-word;
       word-break: break-word;
-    }
+      }
 
-    .card a:hover {
+      .card a:hover {
       color: #ffffff;
-    }
+      }
 
-    .cards-habilidades {
+      .cards-habilidades {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
       padding: 20px 0;
-    }
+      }
 
-    #projetos {
+      #projetos {
       padding: 50px 20px;
       text-align: center;
-    }
+      }
 
-    .projetos-container {
+      .projetos-container {
       display: flex;
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
       margin-top: 30px;
-    }
+      }
 
-    .projeto-box {
+      .projeto-box {
       width: 250px;
       height: 180px;
       background-color: #1b263b;
@@ -321,20 +314,20 @@
       position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
-    }
+      }
 
-    .projeto-box:hover {
+      .projeto-box:hover {
       transform: translateY(-10px);
       box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-    }
+      }
 
-    .projeto-box .overlay {
+      .projeto-box .overlay {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(97, 218, 251, 0.85); /* azul com opacidade */
+      background: rgba(97, 218, 251, 0.85); 
       color: #000;
       font-weight: bold;
       display: flex;
@@ -343,138 +336,138 @@
       opacity: 0;
       transition: opacity 0.3s ease;
       font-size: 1.2em;
-    }
+      }
 
-    .projeto-box:hover .overlay {
+      .projeto-box:hover .overlay {
       opacity: 1;
-    }
+      }
 
-    .modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding-top: 50px;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-  padding-top: 50px;
-}
+      .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 50px;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      padding-top: 50px;
+      }
 
-.modal-content {
-  background-color: #0d1b2a;
-  margin: auto;
-  padding: 20px;
-  border-radius: 15px;
-  width: 80%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-}
+      .modal-content {
+      background-color: #0d1b2a;
+      margin: auto;
+      padding: 20px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      }
 
-.fechar-modal {
-  color: #fff;
-  font-size: 28px;
-  align-self: flex-end;
-  cursor: pointer;
-}
+      .fechar-modal {
+      color: #fff;
+      font-size: 28px;
+      align-self: flex-end;
+      cursor: pointer;
+      }
 
-.modal-body {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+      .modal-body {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      }
 
-.modal-imagens {
-  flex: 1;
-  max-width: 400px;
-  position: relative;
-}
+      .modal-imagens {
+      flex: 1;
+      max-width: 400px;
+      position: relative;
+      }
 
-.modal-imagens img {
-  width: 100%;
-  border-radius: 10px;
-  display: none;
-}
+      .modal-imagens img {
+      width: 100%;
+      border-radius: 10px;
+      display: none;
+      }
 
-.setas {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
+      .setas {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      }
 
-.setas span {
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
-}
+      .setas span {
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      }
 
-.modal-info {
-  flex: 1;
-  color: #fff;
-}
+      .modal-info {
+      flex: 1;
+      color: #fff;
+      }
 
-.modal-info h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
+      .modal-info h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      }
 
-.botoes-modal {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+      .botoes-modal {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      }
 
-.abrir-projeto,
-.voltar-modal {
-  padding: 12px;
-  background-color: #61dafb;
-  border: none;
-  border-radius: 8px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-}
+      .abrir-projeto,
+      .voltar-modal {
+      padding: 12px;
+      background-color: #61dafb;
+      border: none;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      }
 
-.abrir-projeto:hover,
-.voltar-modal:hover {
-  background-color: #4ab4d8;
-}
+      .abrir-projeto:hover,
+      .voltar-modal:hover {
+      background-color: #4ab4d8;
+      }
 
-.projeto-box {
-  position: relative;
-  width: 300px; /* Ajuste conforme seu layout */
-  height: 200px;
-  margin: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 10px;
-}
+      .projeto-box {
+      position: relative;
+      width: 300px; 
+      height: 200px;
+      margin: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px;
+      }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px; /* Metade da altura do restante (200px - 90% da imagem) */
-  background-color: rgba(0, 123, 255, 0.2); /* Azul quase transparente */
-  color: white;
-  text-align: center;
-  line-height: 50px;
-  font-weight: bold;
-  font-size: 18px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
+      .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50px; 
+      background-color: rgba(0, 123, 255, 0.2);
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      font-size: 18px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      }
 
   </style>
 </head>

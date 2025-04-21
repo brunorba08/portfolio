@@ -15,21 +15,25 @@ body {
 header {
   background-color: #0d1b2a;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 10px 20px;
   position: fixed;
-  height: 10%;
   width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-nav .menu-container {
+/* container que junta menu e botoes */
+.menu-container {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .menu-links {
@@ -38,17 +42,20 @@ nav .menu-container {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .menu-links li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .botoes-tema {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .botoes-tema button {
@@ -59,18 +66,18 @@ nav .menu-container {
   cursor: pointer;
 }
 
-/* Estilos para mobile */
+/* Responsivo para mobile */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    height: auto;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 15px;
   }
 
-  nav .menu-container {
+  .menu-container {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
   }
 
   .menu-links {
@@ -81,6 +88,7 @@ nav .menu-container {
 
   .botoes-tema {
     justify-content: center;
+    width: 100%;
   }
 }
 

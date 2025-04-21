@@ -62,18 +62,18 @@ header {
   cursor: pointer;
 }
 
-/* ---------- SOMENTE MOBILE ---------- */
 @media (max-width: 768px) {
   header {
-    padding: 5px 10px;
-  }
+    padding: 10px 15px;
+    min-height: 70px;
+    }
 
   .menu-container {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: space-between;
     align-items: center;
-    gap: 30px; /* aumenta o espaço entre os grupos */
+    gap: 30px;
   }
 
   .menu-links {
@@ -88,7 +88,7 @@ header {
 
   .botoes-tema {
     gap: 10px;
-    margin-left: 20px; /* espaço extra entre links e botões */
+    margin-left: 20px; 
   }
 
   .botoes-tema button {

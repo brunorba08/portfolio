@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #0d1b2a;
+  background-color: #07182b;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,6 @@ nav .menu-container {
   border: none;
   cursor: pointer;
 }
-
 
 .logo img {
   height: 110px;

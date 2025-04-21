@@ -22,14 +22,13 @@
     descricao.style.display = descricao.style.display === "none" || descricao.style.display === "" ? "block" : "none";
   });
 
-  // Script para calcular tempo de atuação desde julho de 2024
-  const inicio = new Date(2024, 6); // julho é mês 6 (zero-based)
+  const inicio = new Date(2024, 6); 
   const hoje = new Date();
   const diffMeses = (hoje.getFullYear() - inicio.getFullYear()) * 12 + (hoje.getMonth() - inicio.getMonth());
   document.getElementById("tempo-itpower").textContent = `${diffMeses} mês${diffMeses !== 1 ? 'es' : ''}`;
  
   function calcularMesesDesdeJulho2024() {
-    const inicio = new Date(2024, 6); // Julho = 6 (0 indexado)
+    const inicio = new Date(2024, 6); 
     const hoje = new Date();
     const anos = hoje.getFullYear() - inicio.getFullYear();
     const meses = hoje.getMonth() - inicio.getMonth() + anos * 12;
@@ -38,7 +37,6 @@
 
   document.getElementById('tempo-itpower').innerText = calcularMesesDesdeJulho2024();
 
-  // Ao clicar em uma box de projeto
   document.querySelectorAll('.projeto-box').forEach(box => {
     box.addEventListener('click', () => {
       const modalId = box.getAttribute('data-modal');
@@ -46,14 +44,11 @@
       if (modal) {
         modal.style.display = "block";
 
-        // Iniciar slide index para esse modal
         let slides = modal.querySelectorAll('.slide');
         let slideIndex = 0;
 
-        // Mostrar o primeiro slide
         mostrarSlide(slideIndex, slides);
 
-        // Setas dentro dessa modal
         const next = modal.querySelector('.next');
         const prev = modal.querySelector('.prev');
 
@@ -69,7 +64,6 @@
           };
         }
 
-        // Botões para fechar
         const fechar = modal.querySelector('.fechar-modal');
         const voltar = modal.querySelector('.voltar-modal');
 
@@ -83,8 +77,34 @@
     });
   });
 
-  // Função para mostrar slide específico
   function mostrarSlide(n, slides) {
     slides.forEach(slide => slide.style.display = "none");
     if (slides[n]) slides[n].style.display = "block";
   }
+
+  function trocarCor(cor) {
+    let root = document.documentElement;
+  
+    if (cor === 'verde') {
+      root.style.setProperty('--cor-destaque', '#4caf50');
+      root.style.setProperty('--cor-sombra', 'rgba(76, 175, 80, 0.7)');
+      root.style.setProperty('--cor-overlay', 'rgba(76, 175, 80, 0.85)');
+      root.style.setProperty('--cor-titulo', '#4caf50'); 
+      document.body.style.backgroundColor = '#d0f0c0';
+    } else if (cor === 'vermelho') {
+      root.style.setProperty('--cor-destaque', '#f44336');
+      root.style.setProperty('--cor-sombra', 'rgba(244, 67, 54, 0.7)');
+      root.style.setProperty('--cor-overlay', 'rgba(244, 67, 54, 0.85)');
+      root.style.setProperty('--cor-titulo', '#f44336'); 
+      document.body.style.backgroundColor = '#fdd';
+    } else if (cor === 'padrao') {
+      root.style.setProperty('--cor-destaque', '#61dafb');
+      root.style.setProperty('--cor-sombra', 'rgba(97, 218, 251, 0.7)');
+      root.style.setProperty('--cor-overlay', 'rgba(97, 218, 251, 0.85)');
+      root.style.setProperty('--cor-titulo', '#61dafb'); 
+      document.body.style.backgroundColor = '#e3f2fd';
+    }
+  }
+  
+  
+  

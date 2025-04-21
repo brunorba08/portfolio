@@ -19,15 +19,21 @@
 
   <header>
     <div class="logo">
-      <img src="img/Logo.png" alt="Minha logo">
     </div>
     <nav>
-      <ul>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+      <div class="menu-container">
+        <ul class="menu-links">
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="botoes-tema">
+          <button onclick="trocarCor('verde')" style="background-color: #4caf50;"></button>
+          <button onclick="trocarCor('vermelho')" style="background-color: #f44336;"></button>
+          <button onclick="trocarCor('padrao')" style="background-color: #2196f3;"></button>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -229,7 +235,7 @@
       <div class="linha">
         <div class="bolinha"></div>
         <p>
-          <strong id="toggle-itpower" style="cursor: pointer; color: #61dafb;">Atualmente na ITPower</strong> — 
+          <strong id="toggle-itpower" style="cursor: pointer;">Atualmente na ITPower</strong> —
           <span id="tempo-itpower"></span> de atuação
         </p>
       </div>

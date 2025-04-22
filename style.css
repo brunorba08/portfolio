@@ -203,6 +203,33 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.animacao-titulo {
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 15px;
+  color: white;
+
+  /* Brilho suave */
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3),
+    0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+#titulo-animado::after {
+  content: '|';
+  animation: blink-caret 0.75s step-end infinite;
+  margin-left: 2px;
+  color: var(--cor-destaque);
+}
+
+@keyframes blink-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
 .sobre-mim {
   background-color: #0d1117;
   color: #fff;

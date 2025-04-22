@@ -232,16 +232,16 @@ section {
 
 .projeto-box {
   position: relative;
-  width: 200px; /* Ajuste o tamanho conforme necessário */
-  height: 250px; /* Ajuste o tamanho conforme necessário */
+  width: 200px;
+  height: 250px;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  opacity: 0; /* Começa invisível para animação */
-  animation: aparecerProjeto 1s forwards; /* Animação de entrada */
+  opacity: 0;
+  animation: aparecerProjeto 1s forwards;
 }
 
 .titulo-projeto {
@@ -251,8 +251,8 @@ section {
   font-weight: bold;
   color: #fff;
   z-index: 1;
-  opacity: 0; /* Começa invisível para animação */
-  animation: aparecerTitulo 1s forwards 0.5s; /* Animação do título com delay */
+  opacity: 0;
+  animation: aparecerTitulo 1s forwards 0.5s;
 }
 
 .overlay {

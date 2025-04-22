@@ -203,6 +203,100 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.projeto-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imagem-projeto {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.projeto-box {
+  position: relative;
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+  height: 250px; /* Ajuste o tamanho conforme necessário */
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0; /* Começa invisível para animação */
+  animation: aparecerProjeto 1s forwards; /* Animação de entrada */
+}
+
+.titulo-projeto {
+  position: absolute;
+  top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1;
+  opacity: 0; /* Começa invisível para animação */
+  animation: aparecerTitulo 1s forwards 0.5s; /* Animação do título com delay */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.imagem-projeto {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Animação para o projeto */
+@keyframes aparecerProjeto {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação para o título */
+@keyframes aparecerTitulo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animacao-titulo {
   font-size: 1.5em;
   font-weight: bold;

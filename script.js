@@ -508,7 +508,7 @@ function digitar() {
 
     if (charIndex > textoAtual.length) {
       apagando = true
-      setTimeout(digitar, 1200) // Pausa antes de apagar
+      setTimeout(digitar, 2500) // Pausa antes de apagar
       return
     }
   } else {

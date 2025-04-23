@@ -1,269 +1,440 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portfólio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="img/Logo.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/Logo.png" />
+  </head>
+  <body>
+    <canvas id="galaxy"></canvas>
 
-</head>
-<body >
-  <canvas id="galaxy"></canvas>
+    <a
+      href="https://wa.me/5511940072543"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <a href="https://wa.me/5511940072543" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <header>
-    <div >
-    </div>
-    <nav>
-      <div class="menu-container">
-        <ul class="menu-links">
-          <li><a href="#sobre">Sobre Mim</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <div class="botoes-tema">
-          <button onclick="trocarCor('verde')" style="background-color: #4caf50;"></button>
-          <button onclick="trocarCor('vermelho')" style="background-color: #f44336;"></button>
-          <button onclick="trocarCor('padrao')" style="background-color: #61dafb;"></button>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <section id="sobre" class="sobre-mim">
-    <div class="sobre-container">
-      
-      <!-- Foto à esquerda -->
-      <div class="foto-perfil">
-        <img src="img/fotoperfil.jpeg" alt="Foto de Bruno Ribeiro">
-      </div>
-  
-      <!-- Texto à direita -->
-      <div class="texto-sobre">
-        <h1><span class="azul">Sobre</span> <span class="normal">mim</span></h1>
-        <p>
-          Olá! Meu nome é <strong>Bruno Ribeiro</strong>, tenho <strong><span id="idade"></span> anos</strong>, sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como <strong>desenvolvedor full stack</strong>, com uma forte preferência por <strong>front-end</strong>.
-        </p>
-        <p>
-          Possuo conhecimento avançado em <strong>JavaScript</strong>, <strong>ColdFusion</strong> e <strong>SQL Server</strong>, além de experiência intermediária com <strong>C#</strong>, <strong>React</strong> e <strong>controle de versão com Git</strong>.
-        </p>
-        <p>
-          Me considero <strong>proativo</strong>, <strong>responsável</strong> e <strong>focado em resultados</strong>. Gosto de trabalhar em equipe e estou sempre em busca de aprender e evoluir. Tenho paixão por criar <strong>interfaces modernas e funcionais</strong> que entreguem a melhor experiência possível para o usuário.
-        </p>
-      </div>
-  
-      <div class="botao-cv">
-        <button onclick="window.print()">Ver meu currículo</button>
-      </div>
-      
-    </div>
-  </section>
-
-  <section id="habilidades">
-    <h1>Minhas habilidades</h1>
-    <p style="text-align: center;">Confira as tecnologias e ferramentas com as quais tenho experiência:</p>
-    <div class="cards-habilidades">
-      <div class="card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
-      <div class="card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
-      <div class="card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
-      <div class="card"><i class="fab fa-react"></i><h3>React JS</h3></div>
-      <div class="card"><i class="fab fa-bootstrap"></i><h3>Bootstrap</h3></div>
-      <div class="card"><i class="fas fa-code"></i><h3>C#</h3></div>
-      <div class="card"><i class="fab fa-node-js"></i><h3>Node.js</h3></div>
-      <div class="card"><i class="fas fa-terminal"></i><h3>ColdFusion</h3></div>
-      <div class="card"><i class="fas fa-database"></i><h3>SQL Server</h3></div>
-      <div class="card"><i class="fab fa-git-alt"></i><h3>Git</h3></div>
-      <div class="card"><i class="fas fa-pencil-ruler"></i><h3>UI/UX (Figma)</h3></div>
-    </div>
-  </section>
-
-  <section id="projetos">
-    <br><br>
-    <h1>Projetos</h1>
-    <p>Veja alguns dos projetos que desenvolvi ao longo da minha trajetória:</p>
-    <div class="projetos-container">
-  
-      <!-- Projeto 1 -->
-      <div class="projeto-box" data-modal="modalProjeto1">
-        <div class="overlay">Padaria</div>
-      </div>
-  
-      <!-- Projeto 2 -->
-      <div class="projeto-box" data-modal="modalProjeto2">
-        <div class="overlay">Igreja</div>
-      </div>
-  
-      <!-- Projeto 3 -->
-      <div class="projeto-box" data-modal="modalProjeto3">
-        <div class="overlay">Concessionária</div>
-      </div>
-  
-    </div>
-  </section>
-  
-  <!-- Modal Projeto 1 -->
-  <div id="modalProjeto1" class="modal">
-    <div class="modal-content">
-      <span class="fechar-modal">&times;</span>
-      <div class="modal-body">
-        <div class="modal-imagens">
-          <img class="slide" src="img/projeto1-1.jpg" style="display:block;">
-          <img class="slide" src="img/projeto1-2.jpg">
-          <img class="slide" src="img/projeto1-3.jpg">
-        
-          <div class="setas">
-            <span class="prev">&#10094;</span>
-            <span class="next">&#10095;</span>
+    <header>
+      <div></div>
+      <nav>
+        <div class="menu-container">
+          <ul class="menu-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+          <div class="botoes-tema">
+            <button
+              onclick="trocarCor('verde')"
+              style="background-color: #4caf50"
+            ></button>
+            <button
+              onclick="trocarCor('vermelho')"
+              style="background-color: #f44336"
+            ></button>
+            <button
+              onclick="trocarCor('padrao')"
+              style="background-color: #61dafb"
+            ></button>
           </div>
         </div>
-        <div class="modal-info">
-          <h2>Padaria</h2>
-          <p class="descricao-projeto">
-            Este projeto foi desenvolvido com o objetivo de demonstrar a integração de tecnologias como HTML, CSS e JavaScript em um layout moderno e funcional.
+      </nav>
+    </header>
+
+    <section id="sobre" class="sobre-mim">
+      <div class="sobre-container">
+        <!-- Foto à esquerda -->
+        <div class="foto-perfil">
+          <img src="img/fotoperfil.jpeg" alt="Foto de Bruno Ribeiro" />
+        </div>
+
+        <!-- Texto à direita -->
+        <div class="texto-sobre">
+          <h1>
+            <span class="azul">Sobre</span> <span class="normal">mim</span>
+          </h1>
+          <div class="animacao-titulo">
+            <span id="titulo-animado"></span>
+          </div>
+          <p>
+            Olá! Meu nome é <strong>Bruno Ribeiro</strong>, tenho
+            <strong><span id="idade"></span> anos</strong>, sou formado em
+            <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como
+            <strong>desenvolvedor full stack</strong>, com uma forte preferência
+            por <strong>front-end</strong>.
           </p>
-          <br>
-          <div class="botoes-modal">
-            <a href="https://projeto1.com" target="_blank" class="abrir-projeto">Abrir Projeto</a>
-            <button class="voltar-modal">Voltar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal Projeto 2 -->
-  <div id="modalProjeto2" class="modal">
-    <div class="modal-content">
-      <span class="fechar-modal">&times;</span>
-      <div class="modal-body">
-        <div class="modal-imagens">
-          <img class="slide" src="img/projeto1-1.jpg" style="display:block;">
-          <img class="slide" src="img/projeto1-2.jpg">
-          <img class="slide" src="img/projeto1-3.jpg">
-        
-          <div class="setas">
-            <span class="prev">&#10094;</span>
-            <span class="next">&#10095;</span>
-          </div>
-        </div>
-        <div class="modal-info">
-          <h2>Igreja</h2>
-          <p class="descricao-projeto">
-            Este projeto foi desenvolvido com o objetivo de demonstrar a integração de tecnologias como HTML, CSS e JavaScript em um layout moderno e funcional.
+          <p>
+            Possuo conhecimento avançado em <strong>JavaScript</strong>,
+            <strong>ColdFusion</strong> e <strong>SQL Server</strong>, além de
+            experiência intermediária com <strong>C#</strong>,
+            <strong>React</strong> e
+            <strong>controle de versão com Git</strong>.
           </p>
-          <br>
-          <div class="botoes-modal">
-            <a href="https://brunorba08.github.io/Igreja/" target="_blank" class="abrir-projeto">Abrir Projeto</a>
-            <button class="voltar-modal">Voltar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal Projeto 3 -->
-  <div id="modalProjeto3" class="modal">
-    <div class="modal-content">
-      <span class="fechar-modal">&times;</span>
-      <div class="modal-body">
-        <div class="modal-imagens">
-          <img class="slide" src="img/projeto1-1.jpg" style="display:block;">
-          <img class="slide" src="img/projeto1-2.jpg">
-          <img class="slide" src="img/projeto1-3.jpg">
-        
-          <div class="setas">
-            <span class="prev">&#10094;</span>
-            <span class="next">&#10095;</span>
-          </div>
-        </div>
-        <div class="modal-info">
-          <h2>Concessionária</h2>
-          <p class="descricao-projeto">
-            Este projeto foi desenvolvido com o objetivo de demonstrar a integração de tecnologias como HTML, CSS e JavaScript em um layout moderno e funcional.
+          <p>
+            Me considero <strong>proativo</strong>,
+            <strong>responsável</strong> e
+            <strong>focado em resultados</strong>. Gosto de trabalhar em equipe
+            e estou sempre em busca de aprender e evoluir. Tenho paixão por
+            criar <strong>interfaces modernas e funcionais</strong> que
+            entreguem a melhor experiência possível para o usuário.
           </p>
-          <br>
-          <div class="botoes-modal">
-            <a href="https://projeto3.com" target="_blank" class="abrir-projeto">Abrir Projeto</a>
-            <button class="voltar-modal">Voltar</button>
+        </div>
+
+        <div class="botao-cv">
+          <button onclick="window.print()">Ver meu currículo</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h1>Minhas habilidades</h1>
+      <p style="text-align: center">
+        Confira as tecnologias e ferramentas com as quais tenho experiência:
+      </p>
+      <div class="cards-habilidades">
+        <div class="card">
+          <i class="fab fa-html5"></i>
+          <h3>HTML5</h3>
+        </div>
+        <div class="card">
+          <i class="fab fa-css3-alt"></i>
+          <h3>CSS3</h3>
+        </div>
+        <div class="card">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="card">
+          <i class="fab fa-react"></i>
+          <h3>React JS</h3>
+        </div>
+        <div class="card">
+          <i class="fab fa-bootstrap"></i>
+          <h3>Bootstrap</h3>
+        </div>
+        <div class="card">
+          <i class="fas fa-code"></i>
+          <h3>C#</h3>
+        </div>
+        <div class="card">
+          <i class="fab fa-node-js"></i>
+          <h3>Node.js</h3>
+        </div>
+        <div class="card">
+          <i class="fas fa-fire"></i>
+          <h3>ColdFusion</h3>
+        </div>
+        <div class="card">
+          <i class="fas fa-database"></i>
+          <h3>SQL Server</h3>
+        </div>
+        <div class="card">
+          <i class="fab fa-git-alt"></i>
+          <h3>Git</h3>
+        </div>
+        <div class="card">
+          <i class="fas fa-pencil-ruler"></i>
+          <h3>UI/UX (Figma)</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <br /><br />
+      <h1>Projetos</h1>
+      <p>
+        Veja alguns dos projetos que desenvolvi ao longo da minha trajetória:
+      </p>
+      <div class="projetos-container">
+        <!-- Projeto 1 -->
+        <div class="projeto-box" data-modal="modalProjeto1">
+          <h2 class="titulo-projeto">Padaria</h2>
+          <div class="overlay"></div>
+          <img
+            src="img/dev.png"
+            alt="Imagem do Projeto 1"
+            class="imagem-projeto"
+          />
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto-box" data-modal="modalProjeto2">
+          <h2 class="titulo-projeto">Igreja</h2>
+          <div class="overlay"></div>
+          <img
+            src="img/dev.png"
+            alt="Imagem do Projeto 2"
+            class="imagem-projeto"
+          />
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto-box" data-modal="modalProjeto3">
+          <h2 class="titulo-projeto">Concessionária</h2>
+          <div class="overlay"></div>
+          <img
+            src="img/dev.png"
+            alt="Imagem do Projeto 3"
+            class="imagem-projeto"
+          />
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="projeto-box" data-modal="modalProjeto4">
+          <h2 class="titulo-projeto">Sistema Solar</h2>
+          <div class="overlay"></div>
+          <img
+            src="img/dev.png"
+            alt="Imagem do Projeto 4"
+            class="imagem-projeto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Projeto 1 -->
+    <div id="modalProjeto1" class="modal">
+      <div class="modal-content">
+        <span class="fechar-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-imagens">
+            <img class="slide" src="img/dev.png" style="display: block" />
+            <img class="slide" src="img/projeto1-2.jpg" />
+            <img class="slide" src="img/projeto1-3.jpg" />
+
+            <div class="setas">
+              <span class="prev">&#10094;</span>
+              <span class="next">&#10095;</span>
+            </div>
+          </div>
+          <div class="modal-info">
+            <h2>Padaria</h2>
+            <p class="descricao-projeto">
+              Este projeto foi desenvolvido com o objetivo de demonstrar a
+              integração de tecnologias como HTML, CSS e JavaScript em um layout
+              moderno e funcional.
+            </p>
+            <br />
+            <div class="botoes-modal">
+              <a
+                href="https://projeto1.com"
+                target="_blank"
+                class="abrir-projeto"
+                >Abrir Projeto</a
+              >
+              <button class="voltar-modal">Voltar</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>  
 
-  <section id="contato" class="contato">
-    <br><br>
-    <h1>Contato</h1>
-    <p>Entre em contato comigo através dos canais abaixo:</p>
-  
-    <div class="contato-cards">
-  
-      <div class="card">
-        <i class="fab fa-linkedin"></i>
-        <h3>LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/bruno-ribeiro-a5b828192" target="_blank">Visitar Perfil</a>
-      </div>
-  
-      <div class="card">
-        <i class="fab fa-github"></i>
-        <h3>GitHub</h3>
-        <a href="https://github.com/brunorba08" target="_blank">Ver Repositórios</a>
-      </div>
-  
-      <div class="card">
-        <i class="fas fa-envelope"></i>
-        <h3>Email</h3>
-        <p>brunoribeiroba080803@gmail.com</p>
-      </div>
-  
-      <div class="card">
-        <i class="fas fa-phone-alt"></i>
-        <h3>Telefone</h3>
-        <a href="tel:+5511940072543">(11) 94007-2543</a>
-      </div>
-  
-    </div>
-    <br><br>
-    <h1>Minha trajetória</h1>
+    <!-- Modal Projeto 2 -->
+    <div id="modalProjeto2" class="modal">
+      <div class="modal-content">
+        <span class="fechar-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-imagens">
+            <img class="slide" src="img/dev.png" style="display: block" />
+            <img class="slide" src="img/projeto1-2.jpg" />
+            <img class="slide" src="img/projeto1-3.jpg" />
 
-    <div class="trajetoria-resumida">
-      <div class="linha">
-        <div class="bolinha"></div>
-        <p>
-          <strong id="toggle-itpower" style="cursor: pointer;">Atualmente na ITPower</strong> —
-          <span id="tempo-itpower"></span> de atuação
-        </p>
-      </div>
-    
-      <div class="descricao-itpower" id="descricao-itpower">
-        <p>
-          A <strong>ITPower</strong> é uma empresa de tecnologia que atua no desenvolvimento e sustentação de sistemas para o setor de <strong>seguros</strong>, com foco em grandes clientes como 
-          <strong>AON Brasil</strong>, 
-          <strong>AON México</strong>, 
-          <strong>Caixa Seguradora</strong>, 
-          <strong>Zurich</strong>, 
-          <strong>SulAmérica</strong>, entre outros.
-        </p>
-        <p>
-          Na empresa, trabalho com <strong>ColdFusion</strong>, <strong>JavaScript</strong>, <strong>SQL Server</strong> e <strong>Git</strong>, dando suporte e implementando melhorias nos sistemas internos das corretoras, além de otimizar processos e entregar soluções que agregam valor ao negócio.
-        </p>
+            <div class="setas">
+              <span class="prev">&#10094;</span>
+              <span class="next">&#10095;</span>
+            </div>
+          </div>
+          <div class="modal-info">
+            <h2>Igreja</h2>
+            <p class="descricao-projeto">
+              Este projeto foi desenvolvido com o objetivo de demonstrar a
+              integração de tecnologias como HTML, CSS e JavaScript em um layout
+              moderno e funcional.
+            </p>
+            <br />
+            <div class="botoes-modal">
+              <a
+                href="https://brunorba08.github.io/Igreja/"
+                target="_blank"
+                class="abrir-projeto"
+                >Abrir Projeto</a
+              >
+              <button class="voltar-modal">Voltar</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section> 
 
-  <footer class="footer">
-    <p>© Todos os direitos reservados — Bruno Ribeiro</p>
-  </footer>
+    <!-- Modal Projeto 3 -->
+    <div id="modalProjeto3" class="modal">
+      <div class="modal-content">
+        <span class="fechar-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-imagens">
+            <img class="slide" src="img/dev.png" style="display: block" />
+            <img class="slide" src="img/projeto1-2.jpg" />
+            <img class="slide" src="img/projeto1-3.jpg" />
 
-  <script src="script.js"></script>
-</body>
+            <div class="setas">
+              <span class="prev">&#10094;</span>
+              <span class="next">&#10095;</span>
+            </div>
+          </div>
+          <div class="modal-info">
+            <h2>Concessionária</h2>
+            <p class="descricao-projeto">
+              Este projeto foi desenvolvido com o objetivo de demonstrar a
+              integração de tecnologias como HTML, CSS e JavaScript em um layout
+              moderno e funcional.
+            </p>
+            <br />
+            <div class="botoes-modal">
+              <a
+                href="https://projeto3.com"
+                target="_blank"
+                class="abrir-projeto"
+                >Abrir Projeto</a
+              >
+              <button class="voltar-modal">Voltar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Modal Projeto 4 -->
+    <div id="modalProjeto4" class="modal">
+      <div class="modal-content">
+        <span class="fechar-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-imagens">
+            <img class="slide" src="img/dev.png" style="display: block" />
+            <img class="slide" src="img/projeto1-2.jpg" />
+            <img class="slide" src="img/projeto1-3.jpg" />
+
+            <div class="setas">
+              <span class="prev">&#10094;</span>
+              <span class="next">&#10095;</span>
+            </div>
+          </div>
+          <div class="modal-info">
+            <h2>Sistema solar</h2>
+            <p class="descricao-projeto">
+              Este projeto foi desenvolvido com o objetivo de demonstrar a
+              integração de tecnologias como HTML, CSS e JavaScript em um layout
+              moderno e funcional.
+            </p>
+            <br />
+            <div class="botoes-modal">
+              <a
+                href="https://brunorba08.github.io/sistemaSolar/"
+                target="_blank"
+                class="abrir-projeto"
+                >Abrir Projeto</a
+              >
+              <button class="voltar-modal">Voltar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contato" class="contato">
+      <br /><br />
+      <h1>Contato</h1>
+      <p>Entre em contato comigo através dos canais abaixo:</p>
+
+      <div class="contato-cards">
+        <div class="card">
+          <i class="fab fa-linkedin"></i>
+          <h3>LinkedIn</h3>
+          <a
+            href="https://www.linkedin.com/in/bruno-ribeiro-a5b828192"
+            target="_blank"
+            >Visitar Perfil</a
+          >
+        </div>
+
+        <div class="card">
+          <i class="fab fa-github"></i>
+          <h3>GitHub</h3>
+          <a href="https://github.com/brunorba08" target="_blank"
+            >Ver Repositórios</a
+          >
+        </div>
+
+        <div class="card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:brunoribeiroba080803@gmail.com"
+              >brunoribeiroba080803@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Telefone</h3>
+          <a href="tel:+5511940072543">+55 (11) 94007-2543</a>
+        </div>
+      </div>
+      <br /><br />
+      <h1>Minha trajetória</h1>
+
+      <div class="trajetoria-resumida">
+        <div class="linha">
+          <div class="bolinha"></div>
+          <p>
+            <strong id="toggle-itpower" style="cursor: pointer"
+              >Atualmente na ITPower</strong
+            >
+            — <span id="tempo-itpower"></span> de atuação
+          </p>
+        </div>
+
+        <div class="descricao-itpower" id="descricao-itpower">
+          <p>
+            A <strong>ITPower</strong> é uma empresa de tecnologia que atua no
+            desenvolvimento e sustentação de sistemas para o setor de
+            <strong>seguros</strong>, com foco em grandes clientes como
+            <strong>AON Brasil</strong>, <strong>AON México</strong>,
+            <strong>Caixa Seguradora</strong>, <strong>Zurich</strong>,
+            <strong>SulAmérica</strong>, entre outros.
+          </p>
+          <p>
+            Na empresa, trabalho com <strong>ColdFusion</strong>,
+            <strong>JavaScript</strong>, <strong>SQL Server</strong> e
+            <strong>Git</strong>, dando suporte e implementando melhorias nos
+            sistemas internos das corretoras, além de otimizar processos e
+            entregar soluções que agregam valor ao negócio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© Todos os direitos reservados — Bruno Ribeiro</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

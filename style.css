@@ -267,7 +267,6 @@ section {
   object-fit: cover;
 }
 
-/* Animação para o projeto */
 @keyframes aparecerProjeto {
   from {
     opacity: 0;
@@ -279,7 +278,6 @@ section {
   }
 }
 
-/* Animação para o título */
 @keyframes aparecerTitulo {
   from {
     opacity: 0;
@@ -614,6 +612,44 @@ section {
   width: 100%;
   border-radius: 10px;
   display: none;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-imagens,
+  .modal-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-info {
+    text-align: center;
+  }
+
+  .botoes-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .botoes-modal a,
+  .botoes-modal button {
+    width: 100%;
+  }
+
+  .setas span {
+    font-size: 24px;
+    padding: 5px;
+  }
 }
 
 .setas {

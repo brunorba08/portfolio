@@ -547,11 +547,10 @@ const observer = new IntersectionObserver(
     })
   },
   {
-    threshold: 0.2, // Ajuste para controlar quando começa o efeito
+    threshold: 0.2,
   }
 )
 
-// Seleciona todas as seções
 document.querySelectorAll('section').forEach((section) => {
   observer.observe(section)
 })

@@ -6,6 +6,7 @@
 }
 
 body {
+  margin: 0;
   padding: 0;
   background: black;
   color: #ffffff;
@@ -19,6 +20,14 @@ body {
   z-index: -1;
   pointer-events: none;
   background: transparent;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 #planet {

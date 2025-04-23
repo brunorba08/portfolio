@@ -468,15 +468,70 @@ function trocarCor(cor) {
     root.style.setProperty('--cor-overlay', 'rgba(244, 67, 54, 0.85)')
     root.style.setProperty('--cor-titulo', '#f44336')
     //  document.body.style.backgroundColor = '#fdd';
-    } else if (cor === 'padrao') {
-      root.style.setProperty('--cor-destaque', '#61dafb');
-      root.style.setProperty('--cor-sombra', 'rgba(97, 218, 251, 0.7)');
-      root.style.setProperty('--cor-overlay', 'rgba(97, 218, 251, 0.85)');
-      root.style.setProperty('--cor-titulo', '#61dafb'); 
-     // document.body.style.backgroundColor = '#e3f2fd';
+  } else if (cor === 'padrao') {
+    root.style.setProperty('--cor-destaque', '#61dafb')
+    root.style.setProperty('--cor-sombra', 'rgba(97, 218, 251, 0.7)')
+    root.style.setProperty('--cor-overlay', 'rgba(97, 218, 251, 0.85)')
+    root.style.setProperty('--cor-titulo', '#61dafb')
+    // document.body.style.backgroundColor = '#e3f2fd';
+  }
+}
+
+const titulos = [
+  'Desenvolvedor Web',
+  'Full Stack Developer',
+  'Criador de Interfaces',
+]
+
+let tituloIndex = 0
+let charIndex = 0
+let apagando = false
+const elemento = document.getElementById('titulo-animado')
+
+function digitar() {
+  const textoAtual = titulos[tituloIndex]
+
+  if (!apagando) {
+    charIndex++
+    const textoVisivel = textoAtual.substring(0, charIndex)
+
+    // Separa a primeira palavra do resto
+    const palavras = textoVisivel.split(' ')
+    const primeiraPalavra = palavras.shift()
+    const restante = palavras.join(' ')
+
+    if (restante.length > 0) {
+      elemento.innerHTML = `<span style="color: white;">${primeiraPalavra}</span> <span style="color: var(--cor-destaque);">${restante}</span>`
+    } else {
+      elemento.innerHTML = `<span style="color: white;">${textoVisivel}</span>`
+    }
+
+    if (charIndex > textoAtual.length) {
+      apagando = true
+      setTimeout(digitar, 1200) // Pausa antes de apagar
+      return
+    }
+  } else {
+    charIndex--
+    const textoVisivel = textoAtual.substring(0, charIndex)
+
+    const palavras = textoVisivel.split(' ')
+    const primeiraPalavra = palavras.shift()
+    const restante = palavras.join(' ')
+
+    if (restante.length > 0) {
+      elemento.innerHTML = `<span style="color: white;">${primeiraPalavra}</span> <span style="color: var(--cor-destaque);">${restante}</span>`
+    } else {
+      elemento.innerHTML = `<span style="color: white;">${textoVisivel}</span>`
+    }
+
+    if (charIndex < 0) {
+      apagando = false
+      tituloIndex = (tituloIndex + 1) % titulos.length
     }
   }
-  
-  
 
-  
+  setTimeout(digitar, apagando ? 40 : 90)
+}
+
+digitar()

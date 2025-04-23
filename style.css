@@ -616,6 +616,12 @@ section {
   display: none;
 }
 
+.modal-imagens video {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
 .setas {
   position: absolute;
   top: 50%;
@@ -659,11 +665,13 @@ section {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
 .abrir-projeto:hover,
 .voltar-modal:hover {
-  background-color: var(--cor-destaque);
+  background-color: var(--cor-destaque); 
+  transform: scale(1.1); 
 }
 
 .projeto-box {

@@ -359,6 +359,7 @@ createPlanets()
 animate()
 
 // corpo script
+
 function calcularIdade(dataNascimento) {
   const hoje = new Date()
   const nascimento = new Date(dataNascimento)

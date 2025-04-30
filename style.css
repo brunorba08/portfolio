@@ -89,10 +89,39 @@ header {
   width: 100%;
 }
 
+.menu-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.botoes-tema {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+.botoes-tema button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   header {
     padding: 20px 15px;
-    min-height: 80px;
+    min-height: 100px;
   }
 
   .menu-container {
@@ -111,6 +140,7 @@ header {
   .menu-links li a {
     font-size: 11px;
     white-space: nowrap;
+    padding: 5px 0;
   }
 
   .botoes-tema {
@@ -124,33 +154,11 @@ header {
   }
 }
 
-.menu-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.botoes-tema {
-  display: flex;
-  gap: 10px;
-  margin-left: 40px;
-}
-
-.botoes-tema button {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
+.logo img {
+  height: 110px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 nav ul {
@@ -187,13 +195,6 @@ nav ul li a:hover {
 
 nav ul li a:hover::after {
   width: 100%;
-}
-
-.logo img {
-  height: 110px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
 }
 
 /*sobre mim*/

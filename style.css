@@ -11,6 +11,7 @@ body {
   background: black;
   color: #ffffff;
   font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 :root {

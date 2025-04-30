@@ -555,3 +555,26 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('section').forEach((section) => {
   observer.observe(section)
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.card')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show')
+          entry.target.classList.remove('hide')
+        } else {
+          entry.target.classList.remove('show')
+          entry.target.classList.add('hide')
+        }
+      })
+    },
+    {
+      threshold: 0.1,
+    }
+  )
+
+  cards.forEach((card) => observer.observe(card))
+})

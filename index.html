@@ -35,11 +35,14 @@
       <nav>
         <div class="menu-container">
           <ul class="menu-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#sobre" id="link-sobre">Sobre</a></li>
+            <li>
+              <a href="#habilidades" id="link-habilidades">Habilidades</a>
+            </li>
+            <li><a href="#projetos" id="link-projetos">Projetos</a></li>
+            <li><a href="#contato" id="link-contato">Contato</a></li>
           </ul>
+
           <div class="botoes-tema">
             <button
               onclick="trocarCor('verde')"
@@ -54,6 +57,11 @@
               style="background-color: #61dafb"
             ></button>
           </div>
+
+          <!-- Botão para mudar idioma -->
+          <button class="btn" onclick="mudarIdioma()" style="margin-left: 10px">
+            English
+          </button>
         </div>
       </nav>
     </header>
@@ -68,26 +76,27 @@
         <!-- Texto à direita -->
         <div class="texto-sobre">
           <h1>
-            <span class="azul">Sobre</span> <span class="normal">mim</span>
+            <span class="azul" id="titulo-sobre">Sobre</span>
+            <span class="normal" id="titulo-mim">mim</span>
           </h1>
           <div class="animacao-titulo">
             <span id="titulo-animado"></span>
           </div>
-          <p>
+          <p id="sobre-paragrafo1">
             Olá! Meu nome é <strong>Bruno Ribeiro</strong>, tenho
             <strong><span id="idade"></span> anos</strong>, sou formado em
             <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como
             <strong>desenvolvedor full stack</strong>, com uma forte preferência
             por <strong>front-end</strong>.
           </p>
-          <p>
+          <p id="sobre-paragrafo2">
             Possuo conhecimento avançado em <strong>JavaScript</strong>,
             <strong>ColdFusion</strong> e <strong>SQL Server</strong>, além de
             experiência intermediária com <strong>C#</strong>,
             <strong>React</strong> e
             <strong>controle de versão com Git</strong>.
           </p>
-          <p>
+          <p id="sobre-paragrafo3">
             Me considero <strong>proativo</strong>,
             <strong>responsável</strong> e
             <strong>focado em resultados</strong>. Gosto de trabalhar em equipe
@@ -103,15 +112,15 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button>Ver meu currículo</button>
+            <button id="botao-cv">Ver meu currículo</button>
           </a>
         </div>
       </div>
     </section>
 
     <section id="habilidades">
-      <h1>Minhas habilidades</h1>
-      <p style="text-align: center">
+      <h1 id="titulo-habilidades">Minhas habilidades</h1>
+      <p id="descricao-habilidades" style="text-align: center">
         Confira as tecnologias e ferramentas com as quais tenho experiência:
       </p>
       <div class="cards-habilidades">

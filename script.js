@@ -578,3 +578,96 @@ document.addEventListener('DOMContentLoaded', function () {
 
   cards.forEach((card) => observer.observe(card))
 })
+const traducoes = {
+  pt: {
+    sobre: 'Sobre',
+    habilidades: 'Habilidades',
+    projetos: 'Projetos',
+    contato: 'Contato',
+
+    // Menu
+    sobre: 'Sobre',
+    habilidades: 'Habilidades',
+    projetos: 'Projetos',
+    contato: 'Contato',
+    // Seção Sobre
+    tituloSobre: 'Sobre',
+    tituloMim: 'mim',
+    paragrafo1: `Olá! Meu nome é <strong>Bruno Ribeiro</strong>, tenho <strong><span id="idade"></span> anos</strong>, sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong> e atuo como <strong>desenvolvedor full stack</strong>, com uma forte preferência por <strong>front-end</strong>.`,
+    paragrafo2: `Possuo conhecimento avançado em <strong>JavaScript</strong>, <strong>ColdFusion</strong> e <strong>SQL Server</strong>, além de experiência intermediária com <strong>C#</strong>, <strong>React</strong> e <strong>controle de versão com Git</strong>.`,
+    paragrafo3: `Me considero <strong>proativo</strong>, <strong>responsável</strong> e <strong>focado em resultados</strong>. Gosto de trabalhar em equipe e estou sempre em busca de aprender e evoluir. Tenho paixão por criar <strong>interfaces modernas e funcionais</strong> que entreguem a melhor experiência possível para o usuário.`,
+    botaoCV: 'Ver meu currículo',
+    // Habilidades
+    tituloHabilidades: 'Minhas habilidades',
+    descricaoHabilidades:
+      'Confira as tecnologias e ferramentas com as quais tenho experiência:',
+  },
+  en: {
+    sobre: 'About',
+    habilidades: 'Skills',
+    projetos: 'Projects',
+    contato: 'Contact',
+    // Menu
+    sobre: 'About',
+    habilidades: 'Skills',
+    projetos: 'Projects',
+    contato: 'Contact',
+    // Seção Sobre
+    tituloSobre: 'About',
+    tituloMim: 'me',
+    paragrafo1: `Hello! My name is <strong>Bruno Ribeiro</strong>, I am <strong><span id="idade"></span> years old</strong>, I have a degree in <strong>Systems Analysis and Development</strong> and I work as a <strong>full stack developer</strong>, with a strong preference for <strong>front-end</strong>.`,
+    paragrafo2: `I have advanced knowledge in <strong>JavaScript</strong>, <strong>ColdFusion</strong>, and <strong>SQL Server</strong>, as well as intermediate experience with <strong>C#</strong>, <strong>React</strong>, and <strong>version control using Git</strong>.`,
+    paragrafo3: `I consider myself <strong>proactive</strong>, <strong>responsible</strong>, and <strong>results-oriented</strong>. I enjoy working in a team and am always looking to learn and grow. I’m passionate about creating <strong>modern and functional interfaces</strong> that deliver the best possible user experience.`,
+    botaoCV: 'View my resume',
+    // Habilidades
+    tituloHabilidades: 'My Skills',
+    descricaoHabilidades:
+      'Check out the technologies and tools I have experience with:',
+  },
+}
+
+let idiomaAtual = 'pt'
+
+function mudarIdioma() {
+  idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt'
+  document.getElementById('link-sobre').textContent =
+    traducoes[idiomaAtual].sobre
+  document.getElementById('link-habilidades').textContent =
+    traducoes[idiomaAtual].habilidades
+  document.getElementById('link-projetos').textContent =
+    traducoes[idiomaAtual].projetos
+  document.getElementById('link-contato').textContent =
+    traducoes[idiomaAtual].contato
+
+  // Menu
+  document.getElementById('link-sobre').textContent =
+    traducoes[idiomaAtual].sobre
+  document.getElementById('link-habilidades').textContent =
+    traducoes[idiomaAtual].habilidades
+  document.getElementById('link-projetos').textContent =
+    traducoes[idiomaAtual].projetos
+  document.getElementById('link-contato').textContent =
+    traducoes[idiomaAtual].contato
+
+  // Sobre mim
+  document.getElementById('titulo-sobre').textContent =
+    traducoes[idiomaAtual].tituloSobre
+  document.getElementById('titulo-mim').textContent =
+    traducoes[idiomaAtual].tituloMim
+  document.getElementById('sobre-paragrafo1').innerHTML =
+    traducoes[idiomaAtual].paragrafo1
+  document.getElementById('sobre-paragrafo2').innerHTML =
+    traducoes[idiomaAtual].paragrafo2
+  document.getElementById('sobre-paragrafo3').innerHTML =
+    traducoes[idiomaAtual].paragrafo3
+  document.getElementById('botao-cv').textContent =
+    traducoes[idiomaAtual].botaoCV
+
+  // Habilidades
+  document.getElementById('titulo-habilidades').textContent =
+    traducoes[idiomaAtual].tituloHabilidades
+  document.getElementById('descricao-habilidades').textContent =
+    traducoes[idiomaAtual].descricaoHabilidades
+  document.querySelector("button[onclick='mudarIdioma()']").textContent =
+    idiomaAtual === 'pt' ? 'English' : 'Português'
+}

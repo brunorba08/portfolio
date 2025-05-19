@@ -173,14 +173,14 @@
 
     <section id="projetos">
       <br /><br />
-      <h1>Projetos</h1>
-      <p>
+      <h1 id="titulo-projetos">Projetos</h1>
+      <p id="descricao-projetos">
         Veja alguns dos projetos que desenvolvi ao longo da minha trajetória:
       </p>
       <div class="projetos-container">
         <!-- Projeto 1 -->
         <div class="projeto-box" data-modal="modalProjeto1">
-          <h2 class="titulo-projeto">Sistema Solar</h2>
+          <h2 class="titulo-projeto" id="projeto1">Sistema Solar</h2>
           <div class="overlay"></div>
           <img
             src="img/sistema solar.png"
@@ -191,7 +191,7 @@
 
         <!-- Projeto 2 -->
         <div class="projeto-box" data-modal="modalProjeto2">
-          <h2 class="titulo-projeto">Padaria</h2>
+          <h2 class="titulo-projeto" id="projeto2">Padaria</h2>
           <div class="overlay"></div>
           <img
             src="img/dev.png"
@@ -202,7 +202,7 @@
 
         <!-- Projeto 3 -->
         <div class="projeto-box" data-modal="modalProjeto3">
-          <h2 class="titulo-projeto">Igreja</h2>
+          <h2 class="titulo-projeto" id="projeto3">Igreja</h2>
           <div class="overlay"></div>
           <img
             src="img/dev.png"
@@ -213,7 +213,7 @@
 
         <!-- Projeto 4 -->
         <div class="projeto-box" data-modal="modalProjeto4">
-          <h2 class="titulo-projeto">Concessionária</h2>
+          <h2 class="titulo-projeto" id="projeto4">Concessionária</h2>
           <div class="overlay"></div>
           <img
             src="img/dev.png"
@@ -254,8 +254,8 @@
             </div>
           </div>
           <div class="modal-info">
-            <h2>Sistema Solar</h2>
-            <p class="descricao-projeto">
+            <h2 id="modalProjeto1Titulo">Sistema Solar</h2>
+            <p class="descricao-projeto" id="modalProjeto1Descricao">
               Este projeto foi criado inicialmente apenas como um plano de fundo
               para outro trabalho, mas o resultado ficou tão legal que resolvi
               transformá-lo em um projeto à parte e incluí-lo aqui no meu
@@ -265,12 +265,13 @@
             <br />
             <div class="botoes-modal">
               <a
+                id="abrirProjetoBtn"
                 href="https://sistema-solar-azure.vercel.app/"
                 target="_blank"
                 class="abrir-projeto"
                 >Abrir Meu Projeto</a
               >
-              <button class="voltar-modal">Voltar</button>
+              <button id="voltarModalBtn" class="voltar-modal">Voltar</button>
             </div>
           </div>
         </div>
@@ -293,8 +294,8 @@
             </div>
           </div>
           <div class="modal-info">
-            <h2>Padaria</h2>
-            <p class="descricao-projeto">
+            <h2 id="modal2-titulo">Padaria</h2>
+            <p class="descricao-projeto" id="modal2-descricao">
               Ainda estou desenvolvendo esse projeto.
             </p>
             <br />
@@ -303,9 +304,10 @@
                 href="https://padaria-navy.vercel.app"
                 target="_blank"
                 class="abrir-projeto"
+                id="modal2-abrir"
                 >Abrir Meu Projeto</a
               >
-              <button class="voltar-modal">Voltar</button>
+              <button class="voltar-modal" id="modal2-voltar">Voltar</button>
             </div>
           </div>
         </div>
@@ -328,8 +330,8 @@
             </div>
           </div>
           <div class="modal-info">
-            <h2>Igreja</h2>
-            <p class="descricao-projeto">
+            <h2 id="modal3-titulo">Igreja</h2>
+            <p class="descricao-projeto" id="modal3-descricao">
               Ainda estou desenvolvendo esse projeto.
             </p>
             <br />
@@ -338,9 +340,10 @@
                 href="https://igreja-puce.vercel.app"
                 target="_blank"
                 class="abrir-projeto"
+                id="modal3-abrir"
                 >Abrir Meu Projeto</a
               >
-              <button class="voltar-modal">Voltar</button>
+              <button class="voltar-modal" id="modal3-voltar">Voltar</button>
             </div>
           </div>
         </div>
@@ -363,8 +366,8 @@
             </div>
           </div>
           <div class="modal-info">
-            <h2>Concessionária</h2>
-            <p class="descricao-projeto">
+            <h2 id="modal4-titulo">Concessionária</h2>
+            <p class="descricao-projeto" id="modal4-descricao">
               Ainda estou desenvolvendo esse projeto.
             </p>
             <br />
@@ -373,9 +376,10 @@
                 href="https://concessionaria-zeta.vercel.app"
                 target="_blank"
                 class="abrir-projeto"
+                id="modal4-abrir"
                 >Abrir Projeto</a
               >
-              <button class="voltar-modal">Voltar</button>
+              <button class="voltar-modal" id="modal4-voltar">Voltar</button>
             </div>
           </div>
         </div>
@@ -384,14 +388,17 @@
 
     <section id="contato" class="contato">
       <br /><br />
-      <h1>Contato</h1>
-      <p>Entre em contato comigo através dos canais abaixo:</p>
+      <h1 id="contato-titulo">Contato</h1>
+      <p id="contato-texto">
+        Entre em contato comigo através dos canais abaixo:
+      </p>
 
       <div class="contato-cards">
         <div class="card">
           <i class="fab fa-linkedin"></i>
-          <h3>LinkedIn</h3>
+          <h3 id="linkedin-titulo">LinkedIn</h3>
           <a
+            id="linkedin-link"
             href="https://www.linkedin.com/in/bruno-ribeiro-a5b828192"
             target="_blank"
             >Visitar Perfil</a
@@ -400,15 +407,18 @@
 
         <div class="card">
           <i class="fab fa-github"></i>
-          <h3>GitHub</h3>
-          <a href="https://github.com/brunorba08" target="_blank"
+          <h3 id="github-titulo">GitHub</h3>
+          <a
+            id="github-link"
+            href="https://github.com/brunorba08"
+            target="_blank"
             >Ver Repositórios</a
           >
         </div>
 
         <div class="card">
           <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
+          <h3 id="email-titulo">Email</h3>
           <p>
             <a href="mailto:brunoribeiroba080803@gmail.com"
               >brunoribeiroba080803@gmail.com</a
@@ -418,12 +428,12 @@
 
         <div class="card">
           <i class="fas fa-phone-alt"></i>
-          <h3>Telefone</h3>
+          <h3 id="telefone-titulo">Telefone</h3>
           <a href="tel:+5511940072543">+55 (11) 94007-2543</a>
         </div>
       </div>
       <br /><br />
-      <h1>Minha trajetória</h1>
+      <h1 id="trajetoria-titulo">Minha trajetória</h1>
 
       <div class="trajetoria-resumida">
         <div class="linha">
@@ -432,33 +442,27 @@
             <strong id="toggle-itpower" style="cursor: pointer"
               >Atualmente na ITPower</strong
             >
+
             — <span id="tempo-itpower"></span> de atuação
           </p>
         </div>
 
         <div class="descricao-itpower" id="descricao-itpower">
-          <p>
-            A <strong>ITPower</strong> é uma empresa de tecnologia que atua no
-            desenvolvimento e sustentação de sistemas para o setor de
-            <strong>seguros</strong>, com foco em grandes clientes como
-            <strong>AON Brasil</strong>, <strong>AON México</strong>,
-            <strong>Caixa Seguradora</strong>, <strong>Zurich</strong>,
-            <strong>SulAmérica</strong>, entre outros.
-          </p>
-          <p>
-            Na empresa, trabalho com <strong>ColdFusion</strong>,
-            <strong>JavaScript</strong>, <strong>SQL Server</strong> e
-            <strong>Git</strong>, dando suporte e implementando melhorias nos
-            sistemas internos das corretoras, além de otimizar processos e
-            entregar soluções que agregam valor ao negócio.
-          </p>
-        </div>
+        <p id="itpower-descricao1">
+          A <strong>ITPower</strong> é uma empresa de tecnologia que atua no desenvolvimento e sustentação de sistemas para o setor de
+          <strong>seguros</strong>, com foco em grandes clientes como <strong>AON Brasil</strong>, <strong>AON México</strong>,
+          <strong>Caixa Seguradora</strong>, <strong>Zurich</strong>, <strong>SulAmérica</strong>, entre outros.
+        </p>
+        <p id="itpower-descricao2">
+          Na empresa, trabalho com <strong>ColdFusion</strong>, <strong>JavaScript</strong>, <strong>SQL Server</strong> e
+          <strong>Git</strong>, dando suporte e implementando melhorias nos sistemas internos das corretoras, além de otimizar processos e
+          entregar soluções que agregam valor ao negócio.
+        </p>
       </div>
-    </section>
-
-    <footer class="footer">
-      <p>© Todos os direitos reservados — Bruno Ribeiro</p>
-    </footer>
+</section>
+<footer class="footer">
+  <p id="footer-texto">© Todos os direitos reservados — Bruno Ribeiro</p>
+</footer>
 
     <script src="script.js"></script>
   </body>

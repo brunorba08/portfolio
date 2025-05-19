@@ -130,7 +130,6 @@ header {
     overflow-x: auto;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
   }
 
   .menu-links {
@@ -180,7 +179,7 @@ nav ul li a {
 }
 
 .btn {
-  width: 6.5em;
+  width: 5.2em;
   height: 2.3em;
   margin: 0.5em;
   background: var(--cor-destaque);

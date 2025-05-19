@@ -601,6 +601,43 @@ const traducoes = {
     tituloHabilidades: 'Minhas habilidades',
     descricaoHabilidades:
       'Confira as tecnologias e ferramentas com as quais tenho experiência:',
+    tituloProjetos: 'Projetos',
+    descricaoProjetos:
+      'Veja alguns dos projetos que desenvolvi ao longo da minha trajetória:',
+    projeto1: 'Sistema Solar',
+    projeto2: 'Padaria',
+    projeto3: 'Igreja',
+    projeto4: 'Concessionária',
+
+    modalProjeto1Titulo: 'Sistema Solar',
+    modalProjeto1Descricao: `Este projeto foi criado inicialmente apenas como um plano de fundo para outro trabalho, mas o resultado ficou tão legal que resolvi transformá-lo em um projeto à parte e incluí-lo aqui no meu portfólio. Ele demonstra a integração de HTML, CSS e JavaScript em um layout visualmente moderno e dinâmico.`,
+    abrirProjeto: 'Abrir Meu Projeto',
+    voltar: 'Voltar',
+    projeto2Titulo: 'Padaria',
+    projeto2Descricao: 'Ainda estou desenvolvendo esse projeto.',
+    abrirProjeto: 'Abrir Meu Projeto',
+    voltar: 'Voltar',
+    projeto3Titulo: 'Igreja',
+    projeto3Descricao: 'Ainda estou desenvolvendo esse projeto.',
+    projeto4Titulo: 'Concessionária',
+    projeto4Descricao: 'Ainda estou desenvolvendo esse projeto.',
+    contatoTitulo: 'Contato',
+    contatoTexto: 'Entre em contato comigo através dos canais abaixo:',
+    linkedinTitulo: 'LinkedIn',
+    linkedinLink: 'Visitar Perfil',
+    githubTitulo: 'GitHub',
+    githubLink: 'Ver Repositórios',
+    emailTitulo: 'Email',
+    telefoneTitulo: 'Telefone',
+    trajetoriaTitulo: 'Minha trajetória',
+    atualmenteITPower: 'Atualmente na ITPower',
+    itpowerDescricao1:
+      'A ITPower é uma empresa de tecnologia que atua no desenvolvimento e sustentação de sistemas para o setor de seguros, com foco em grandes clientes como AON Brasil, AON México, Caixa Seguradora, Zurich, SulAmérica, entre outros.',
+    itpowerDescricao2:
+      'Na empresa, trabalho com ColdFusion, JavaScript, SQL Server e Git, dando suporte e implementando melhorias nos sistemas internos das corretoras, além de otimizar processos e entregar soluções que agregam valor ao negócio.',
+    footerTexto: '© Todos os direitos reservados — Bruno Ribeiro',
+    tempoMes: 'mês',
+    tempoMeses: 'meses',
   },
   en: {
     sobre: 'About',
@@ -623,6 +660,42 @@ const traducoes = {
     tituloHabilidades: 'My Skills',
     descricaoHabilidades:
       'Check out the technologies and tools I have experience with:',
+    tituloProjetos: 'Projects',
+    descricaoProjetos:
+      'Check out some of the projects I’ve developed throughout my journey:',
+    projeto1: 'Solar System',
+    projeto2: 'Bakery',
+    projeto3: 'Church',
+    projeto4: 'Car Dealership',
+    modalProjeto1Titulo: 'Solar System',
+    modalProjeto1Descricao: `This project was initially created just as a background for another work, but the result turned out so nice that I decided to turn it into a standalone project and include it here in my portfolio. It showcases the integration of HTML, CSS, and JavaScript in a visually modern and dynamic layout.`,
+    abrirProjeto: 'Open My Project',
+    voltar: 'Back',
+    projeto2Titulo: 'Bakery',
+    projeto2Descricao: 'I am still developing this project.',
+    abrirProjeto: 'Open My Project',
+    voltar: 'Back',
+    projeto3Titulo: 'Church',
+    projeto3Descricao: 'I am still developing this project.',
+    projeto4Titulo: 'Car Dealership',
+    projeto4Descricao: 'I am still developing this project.',
+    contatoTitulo: 'Contact',
+    contatoTexto: 'Get in touch with me through the channels below:',
+    linkedinTitulo: 'LinkedIn',
+    linkedinLink: 'Visit Profile',
+    githubTitulo: 'GitHub',
+    githubLink: 'View Repositories',
+    emailTitulo: 'Email',
+    telefoneTitulo: 'Phone',
+    trajetoriaTitulo: 'My Journey',
+    atualmenteITPower: 'Currently at ITPower',
+    itpowerDescricao1:
+      'ITPower is a technology company focused on the development and maintenance of systems for the insurance sector, serving major clients like AON Brazil, AON Mexico, Caixa Seguradora, Zurich, SulAmérica, and others.',
+    itpowerDescricao2:
+      'At the company, I work with ColdFusion, JavaScript, SQL Server, and Git, supporting and improving internal systems for brokers, optimizing processes, and delivering solutions that add value to the business.',
+    footerTexto: '© All rights reserved — Bruno Ribeiro',
+    tempoMes: 'month',
+    tempoMeses: 'months',
   },
 }
 
@@ -668,6 +741,84 @@ function mudarIdioma() {
     traducoes[idiomaAtual].tituloHabilidades
   document.getElementById('descricao-habilidades').textContent =
     traducoes[idiomaAtual].descricaoHabilidades
+
+  // Projetos
+  document.getElementById('titulo-projetos').textContent =
+    traducoes[idiomaAtual].tituloProjetos
+  document.getElementById('descricao-projetos').textContent =
+    traducoes[idiomaAtual].descricaoProjetos
+  document.getElementById('projeto1').textContent =
+    traducoes[idiomaAtual].projeto1
+  document.getElementById('projeto2').textContent =
+    traducoes[idiomaAtual].projeto2
+  document.getElementById('projeto3').textContent =
+    traducoes[idiomaAtual].projeto3
+  document.getElementById('projeto4').textContent =
+    traducoes[idiomaAtual].projeto4
+
+  document.getElementById('modalProjeto1Titulo').textContent =
+    traducoes[idiomaAtual].modalProjeto1Titulo
+  document.getElementById('modalProjeto1Descricao').textContent =
+    traducoes[idiomaAtual].modalProjeto1Descricao
+  document.getElementById('abrirProjetoBtn').textContent =
+    traducoes[idiomaAtual].abrirProjeto
+  document.getElementById('voltarModalBtn').textContent =
+    traducoes[idiomaAtual].voltar
+
+  document.getElementById('modal2-titulo').textContent =
+    traducoes[idiomaAtual].projeto2Titulo
+  document.getElementById('modal2-descricao').textContent =
+    traducoes[idiomaAtual].projeto2Descricao
+  document.getElementById('modal2-abrir').textContent =
+    traducoes[idiomaAtual].abrirProjeto
+  document.getElementById('modal2-voltar').textContent =
+    traducoes[idiomaAtual].voltar
+  document.getElementById('modal3-titulo').textContent =
+    traducoes[idiomaAtual].projeto3Titulo
+  document.getElementById('modal3-descricao').textContent =
+    traducoes[idiomaAtual].projeto3Descricao
+  document.getElementById('modal3-abrir').textContent =
+    traducoes[idiomaAtual].abrirProjeto
+  document.getElementById('modal3-voltar').textContent =
+    traducoes[idiomaAtual].voltar
+  // Modal Projeto 4
+  document.getElementById('modal4-titulo').textContent =
+    traducoes[idiomaAtual].projeto4Titulo
+  document.getElementById('modal4-descricao').textContent =
+    traducoes[idiomaAtual].projeto4Descricao
+  document.getElementById('modal4-abrir').textContent =
+    traducoes[idiomaAtual].abrirProjeto
+  document.getElementById('modal4-voltar').textContent =
+    traducoes[idiomaAtual].voltar
+
+  document.getElementById('contato-titulo').textContent =
+    traducoes[idiomaAtual].contatoTitulo
+  document.getElementById('contato-texto').textContent =
+    traducoes[idiomaAtual].contatoTexto
+  document.getElementById('linkedin-titulo').textContent =
+    traducoes[idiomaAtual].linkedinTitulo
+  document.getElementById('linkedin-link').textContent =
+    traducoes[idiomaAtual].linkedinLink
+  document.getElementById('github-titulo').textContent =
+    traducoes[idiomaAtual].githubTitulo
+  document.getElementById('github-link').textContent =
+    traducoes[idiomaAtual].githubLink
+  document.getElementById('email-titulo').textContent =
+    traducoes[idiomaAtual].emailTitulo
+  document.getElementById('telefone-titulo').textContent =
+    traducoes[idiomaAtual].telefoneTitulo
+
+  document.getElementById('trajetoria-titulo').textContent =
+    traducoes[idiomaAtual].trajetoriaTitulo
+  document.getElementById('toggle-itpower').textContent =
+    traducoes[idiomaAtual].atualmenteITPower
+  document.getElementById('itpower-descricao1').innerHTML =
+    traducoes[idiomaAtual].itpowerDescricao1
+  document.getElementById('itpower-descricao2').innerHTML =
+    traducoes[idiomaAtual].itpowerDescricao2
+  document.getElementById('footer-texto').textContent =
+    traducoes[idiomaAtual].footerTexto
+
   document.querySelector("button[onclick='mudarIdioma()']").textContent =
     idiomaAtual === 'pt' ? 'English' : 'Português'
 }
